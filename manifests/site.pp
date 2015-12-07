@@ -135,7 +135,6 @@ package {
     'hipchat',
     'slack',
     'alfred',
-    'vagrant-manager',
     'kindle',
   ]: provider => 'brewcask'
 }
