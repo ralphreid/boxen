@@ -88,3 +88,60 @@ node default {
     target => $boxen::config::repodir
   }
 }
+
+
+# additional modules
+
+include onepassword
+
+include atom
+
+atom::package {
+  [
+    'linter',
+    'markdown-pdf',
+    'multi-cursor',
+    'markdown-preview',
+    'markdown-sort-list',
+    'markdown-preview-opener',
+    'markdown-table-formatter',
+    'markdown-format',
+    'linter-markdown',
+    'markdown-scroll-sync',
+    'markdown-helpers',
+  ]:
+}
+
+atom::theme { 'monokai': }
+
+#configure git
+git::config::global { 'user.email':
+  value  => 'beresfordjunior@me.com'
+}
+git::config::global { 'user.name':
+  value  => 'Ralph Reid'
+}
+
+package {
+  [
+    'paw',
+    'google-chrome',
+    'postbox',
+    'dropbox',
+    'iterm2',
+    'evernote',
+    'pycharm',
+    'skype',
+    'hipchat',
+    'slack',
+    'alfred',
+    'vagrant-manager',
+    'kindle',
+  ]: provider => 'brewcask'
+}
+
+# Vagrant configs
+
+class { 'vagrant': }
+
+vagrant::plugin { 'r10k': }
