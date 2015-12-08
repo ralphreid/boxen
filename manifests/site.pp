@@ -132,6 +132,7 @@ package {
     'slack',
     'alfred',
     'virtualbox',
+    'box-sync',
   ]: provider => 'brewcask'
 }
 
