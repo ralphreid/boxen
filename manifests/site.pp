@@ -92,10 +92,6 @@ node default {
 
 # additional modules
 
-include onepassword
-
-include atom
-
 atom::package {
   [
     'linter',
@@ -139,5 +135,10 @@ package {
 }
 
 # Vagrant configs
-
 class { 'vagrant': }
+
+ruby_gem { 'bropages for all rubies':
+  gem     => 'bropages',
+  version => '0.1.0',
+  ruby_version => '*',
+}
