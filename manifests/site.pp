@@ -142,5 +142,3 @@ package {
 # Vagrant configs
 
 class { 'vagrant': }
-
-vagrant::plugin { 'r10k': }
