@@ -131,6 +131,7 @@ package {
     'hipchat',
     'slack',
     'alfred',
+    'virtualbox',
   ]: provider => 'brewcask'
 }
 
