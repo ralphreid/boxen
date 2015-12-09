@@ -74,6 +74,17 @@ node default {
   ruby::version { '2.1.7': }
   ruby::version { '2.2.3': }
 
+  ruby_gem { 'bropages for all rubies':
+    gem     => 'bropages',
+    version => '0.1.0',
+    ruby_version => '*',
+  }
+
+  # Set the global default ruby (auto-installs it if it can)
+  class { 'ruby::global':
+    version => '2.2.2'
+  }
+
   # common, useful packages
   package {
     [
@@ -138,9 +149,3 @@ package {
 
 # Vagrant configs
 class { 'vagrant': }
-
-ruby_gem { 'bropages for all rubies':
-  gem     => 'bropages',
-  version => '0.1.0',
-  ruby_version => '*',
-}
