@@ -149,3 +149,4 @@ package {
 
 # Vagrant configs
 class { 'vagrant': }
+vagrant:: { 'vagrant-hostmanager': }
