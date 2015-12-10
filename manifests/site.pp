@@ -149,4 +149,7 @@ package {
 
 # Vagrant configs
 class { 'vagrant': }
-vagrant::plugin { 'hostmanager': }
+vagrant::plugin { [
+  'hostmanager',
+  'vbguest',
+  ]: }
