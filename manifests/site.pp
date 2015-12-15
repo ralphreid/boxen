@@ -116,6 +116,7 @@ atom::package {
     'linter-markdown',
     'markdown-scroll-sync',
     'markdown-helpers',
+    'dash',
   ]:
 }
 
