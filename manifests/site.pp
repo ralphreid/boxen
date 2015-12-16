@@ -152,5 +152,5 @@ package {
 class { 'vagrant': }
 vagrant::plugin { [
   'hostmanager',
-  'vbguest',
+  'r10k',
   ]: }
