@@ -145,7 +145,6 @@ package {
     'alfred',
     'virtualbox',
     'box-sync',
-    'sourcetree',
   ]: provider => 'brewcask'
 }
 
