@@ -153,4 +153,5 @@ class { 'vagrant': }
 vagrant::plugin { [
   'hostmanager',
   'r10k',
+  'faster',
   ]: }
