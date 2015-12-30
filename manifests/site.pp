@@ -130,6 +130,10 @@ git::config::global { 'user.name':
   value  => 'Ralph Reid'
 }
 
+git::config::global { 'push.default':
+  value => 'simple'
+}
+
 package {
   [
     'paw',
