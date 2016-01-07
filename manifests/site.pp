@@ -117,6 +117,7 @@ atom::package {
     'markdown-scroll-sync',
     'markdown-helpers',
     'dash',
+    'language-puppet',
   ]:
 }
 
