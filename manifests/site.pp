@@ -150,7 +150,13 @@ package {
     'alfred',
     'virtualbox',
     'box-sync',
+    'dockertoolbox',
   ]: provider => 'brewcask'
+}
+
+package {
+  ['asciinema', # Enables screencast recording
+  ]:
 }
 
 # Vagrant configs
