@@ -151,7 +151,6 @@ package {
     'virtualbox',
     'box-sync',
     'dockertoolbox',
-    'progressive-downloader',
   ]: provider => 'brewcask'
 }
 
