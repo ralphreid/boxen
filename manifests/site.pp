@@ -90,7 +90,7 @@ node default {
     [
       'ack',
       'findutils',
-      'gnu-tar'
+      'gnu-tar',
     ]:
   }
 
@@ -156,6 +156,7 @@ package {
 
 package {
   ['asciinema', # Enables screencast recording
+    'wget',
   ]:
 }
 
