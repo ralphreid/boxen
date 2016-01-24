@@ -166,4 +166,5 @@ vagrant::plugin { [
   'hostmanager',
   'r10k',
   'faster',
+  'snapshot',
   ]: }
