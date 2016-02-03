@@ -157,6 +157,7 @@ package {
 package {
   ['asciinema', # Enables screencast recording
     'wget',
+    'ssh-copy-id',
   ]:
 }
 
