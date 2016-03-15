@@ -2,6 +2,8 @@ require boxen::environment
 require homebrew
 require gcc
 
+include profile::tmux
+
 Exec {
   group       => 'staff',
   logoutput   => on_failure,
