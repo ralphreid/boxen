@@ -3,6 +3,8 @@ require homebrew
 require gcc
 
 include profile::tmux
+include profile::vundle
+include profile::vim
 
 Exec {
   group       => 'staff',
