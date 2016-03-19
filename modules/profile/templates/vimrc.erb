@@ -29,9 +29,15 @@ Plugin 'tomtom/tlib_vim'
 " Optional:
 Plugin 'honza/vim-snippets'
 
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
-filetype plugin indent on    " required
+
+" assuming you want to use snipmate snippet engine
+ActivateAddons vim-snippets snipmate
+
+"filetype plugin indent on    " required
+filetype plugin on    " required
 " To ignore plugin indent changes, instead use:
 "filetype plugin on
 "
