@@ -2,7 +2,10 @@
 " other colors at /usr/share/vim/vim73/colors
 :colors zenburn
 
-filetype off                  " required
+filetype on                  " required
+
+" Enable indentation matching for =>'s
+filetype plugin indent on
 
 set tw=0
 set relativenumber            " display line numbers relative
@@ -21,3 +24,17 @@ endtry
 
 autocmd FileType ruby setlocal expandtab shiftwidth=2 tabstop=2
 au BufNewFile,BufRead *.md set filetype=markdown
+
+highlight LiteralTabs ctermbg=darkgreen guibg=darkgreen
+match LiteralTabs /\s\  /
+highlight ExtraWhitespace ctermbg=darkgreen guibg=darkgreen
+match ExtraWhitespace /\s\+$/
+
+" Show me a ruler
+set ruler
+
+" Set up puppet manifest and spec options
+au BufRead,BufNewFile *.pp
+  \ set filetype=puppet
+au BufRead,BufNewFile *_spec.rb
+  \ nmap <F8> :!rspec --color %<CR>
