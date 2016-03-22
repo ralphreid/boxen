@@ -3,7 +3,13 @@ class profile::vim {
   file { ".vmrc":
     ensure  => file,
     path    => "/Users/${::boxen_user}/.vimrc",
-    content => template('profile/vimrc.erb'),
+    content => template('profile/vim/vimrc.erb'),
+  }
+
+  file { ".vmrc.settings":
+    ensure  => file,
+    path    => "/Users/${::boxen_user}/.vimrc.settings",
+    content => template('profile/vim/vimrc.settings.erb'),
   }
 
   file { "ftdetect":
