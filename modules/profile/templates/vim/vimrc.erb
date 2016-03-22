@@ -1,17 +1,4 @@
-
-autocmd FileType ruby setlocal expandtab shiftwidth=2 tabstop=2
-
-" display line numbers
-"set number
-
-" display line numbers relative to line where cursor is
-set relativenumber
-
-" BELOW is configuration for vundle
-" further details at https://github.com/VundleVim/Vundle.vim
-
 set nocompatible              " be iMproved, required
-filetype off                  " required
 
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -20,30 +7,41 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 
-" Profiles here:
+" Bundles here:
 Plugin 'Zenburn'
-
 Plugin 'ervandew/supertab'
-
 Plugin 'vim-ruby/vim-ruby'
-
 Plugin 'scrooloose/nerdtree'
-
 Plugin 'scrooloose/vimfiles'
-
 Plugin 'garbas/vim-snipmate'
-
 Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'tomtom/tlib_vim'
+
 " Optional:
 Plugin 'honza/vim-snippets'
+
+" recommended by github.com/pizzaops/
+Plugin 'scrooloose/syntastic'
+Plugin 'scrooloose/nerdcommenter'
+Plugin 'Shougo/neocomplete.vim'
+Plugin 'godlygeek/tabular'
+Plugin 'kien/ctrlp.vim'
+Plugin 'nathanaelkane/vim-indent-guides'
+Plugin 'tpope/vim-rails'
+Plugin 'mattn/webapi-vim'
+Plugin 'mattn/gist-vim'
+
+" syntax
+Plugin 'rodjek/vim-puppet'
+Plugin 'tpope/vim-markdown'
+Plugin 'fatih/vim-go'
+Plugin 'hashivim/vim-terraform'
 
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 
-"filetype plugin indent on    " required
-filetype plugin on    " required
+filetype plugin indent on    " required
 " To ignore plugin indent changes, instead use:
 "filetype plugin on
 "
