@@ -22,9 +22,9 @@ class profile::vim {
     path => '/Users/${::boxen_user}/.vim/ftplugin',
   }
 
-  file { 'index_folder':
+  file { 'indent_folder':
     ensure => directory,
-    path => '/Users/${::boxen_user}/.vim/index',
+    path => '/Users/${::boxen_user}/.vim/indent',
   }
 
   file { 'syntax_folder':
@@ -36,24 +36,28 @@ class profile::vim {
     ensure  => file,
     path    => "/Users/${::boxen_user}/.vim/ftdetect/puppet.vim",
     content => template('profile/vim/ftdetect.vim.erb'),
+    require => 'ftdetect_folder',
   }
 
   file { "ftplugin":
     ensure  => file,
     path    => "/Users/${::boxen_user}/.vim/ftplugin/puppet.vim",
     content => template('profile/vim/ftplugin.vim.erb'),
+    require => 'ftplugin_folder',
   }
 
   file { "indent":
     ensure  => file,
     path    => "/Users/${::boxen_user}/.vim/indent/puppet.vim",
     content => template('profile/vim/indent.vim.erb'),
+    require => 'indent_folder',
   }
 
   file { "syntax":
     ensure  => file,
     path    => "/Users/${::boxen_user}/.vim/syntax/puppet.vim",
     content => template('profile/vim/syntax.vim.erb'),
+    require => 'syntax_folder',
   }
 
 }
