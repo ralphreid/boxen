@@ -20,7 +20,6 @@ try
 catch
 endtry
 
-"autocmd FileType ruby setlocal expandtab shiftwidth=2 tabstop=2
 au BufNewFile,BufRead *.md set filetype=markdown
 
 highlight LiteralTabs ctermbg=darkgreen guibg=darkgreen
@@ -47,7 +46,11 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
 " UltiSnips
-let g:UltiSnipsExpandTrigger="<tab>"
 autocmd FileType pp UltiSnipsAddFiletypes puppet
 autocmd FileType js UltiSnipsAddFiletypes javascript
 autocmd FileType rb UltiSnipsAddFiletypes ruby
+
+" Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
+let g:UltiSnipsExpandTrigger="<tab><tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
