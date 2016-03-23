@@ -14,22 +14,22 @@ class profile::vim {
 
   file { "ftdetect_folder":
     ensure => directory,
-    path => '/Users/${::boxen_user}/.vim/ftdetect',
+    path => "/Users/${::boxen_user}/.vim/ftdetect",
   }
 
   file { "ftplugin_folder":
     ensure => directory,
-    path => '/Users/${::boxen_user}/.vim/ftplugin',
+    path => "/Users/${::boxen_user}/.vim/ftplugin",
   }
 
   file { "indent_folder":
     ensure => directory,
-    path => '/Users/${::boxen_user}/.vim/indent',
+    path => "/Users/${::boxen_user}/.vim/indent",
   }
 
   file { "syntax_folder":
     ensure => directory,
-    path => '/Users/${::boxen_user}/.vim/syntax',
+    path => "/Users/${::boxen_user}/.vim/syntax",
   }
 
   file { "ftdetect":
