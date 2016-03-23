@@ -32,8 +32,8 @@ class profile::vim {
 
   file { "syntax":
     ensure  => file,
-    path    => "/Users/${::boxen_user}/.vim/syntax.vim",
-    content => template('profile/vim/syntax/puppet.vim.erb'),
+    path    => "/Users/${::boxen_user}/.vim/syntax/puppet.vim",
+    content => template('profile/vim/syntax.vim.erb'),
   }
 
 }
