@@ -12,22 +12,22 @@ class profile::vim {
     content => template('profile/vim/vimrc.settings.erb'),
   }
 
-  file { 'ftdetect_folder':
+  file { "ftdetect_folder":
     ensure => directory,
     path => '/Users/${::boxen_user}/.vim/ftdetect',
   }
 
-  file { 'ftplugin_folder':
+  file { "ftplugin_folder":
     ensure => directory,
     path => '/Users/${::boxen_user}/.vim/ftplugin',
   }
 
-  file { 'indent_folder':
+  file { "indent_folder":
     ensure => directory,
     path => '/Users/${::boxen_user}/.vim/indent',
   }
 
-  file { 'syntax_folder':
+  file { "syntax_folder":
     ensure => directory,
     path => '/Users/${::boxen_user}/.vim/syntax',
   }
@@ -36,28 +36,28 @@ class profile::vim {
     ensure  => file,
     path    => "/Users/${::boxen_user}/.vim/ftdetect/puppet.vim",
     content => template('profile/vim/ftdetect.vim.erb'),
-    require => 'ftdetect_folder',
+    require => File['ftdetect_folder'],
   }
 
   file { "ftplugin":
     ensure  => file,
     path    => "/Users/${::boxen_user}/.vim/ftplugin/puppet.vim",
     content => template('profile/vim/ftplugin.vim.erb'),
-    require => 'ftplugin_folder',
+    require => File['ftplugin_folder'],
   }
 
   file { "indent":
     ensure  => file,
     path    => "/Users/${::boxen_user}/.vim/indent/puppet.vim",
     content => template('profile/vim/indent.vim.erb'),
-    require => 'indent_folder',
+    require => File['indent_folder'],
   }
 
   file { "syntax":
     ensure  => file,
     path    => "/Users/${::boxen_user}/.vim/syntax/puppet.vim",
     content => template('profile/vim/syntax.vim.erb'),
-    require => 'syntax_folder',
+    require => File['syntax_folder'],
   }
 
 }
