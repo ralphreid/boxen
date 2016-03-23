@@ -14,26 +14,26 @@ class profile::vim {
 
   file { "ftdetect":
     ensure  => file,
-    path    => "/Users/${::boxen_user}/.vim/ftdetect.vim",
+    path    => "/Users/${::boxen_user}/.vim/ftdetect/puppet.vim",
     content => template('profile/vim/ftdetect.vim.erb'),
   }
 
   file { "ftplugin":
     ensure  => file,
-    path    => "/Users/${::boxen_user}/.vim/ftplugin.vim",
+    path    => "/Users/${::boxen_user}/.vim/ftplugin/puppet.vim",
     content => template('profile/vim/ftplugin.vim.erb'),
   }
 
   file { "indent":
     ensure  => file,
-    path    => "/Users/${::boxen_user}/.vim/indent.vim",
+    path    => "/Users/${::boxen_user}/.vim/indent/puppet.vim",
     content => template('profile/vim/indent.vim.erb'),
   }
 
   file { "syntax":
     ensure  => file,
     path    => "/Users/${::boxen_user}/.vim/syntax.vim",
-    content => template('profile/vim/syntax.vim.erb'),
+    content => template('profile/vim/syntax/puppet.vim.erb'),
   }
 
 }
