@@ -30,6 +30,10 @@ match ExtraWhitespace /\s\+$/
 " Show me a ruler
 set ruler
 
+" set default comment color to cyan instead of darkblue
+" which is not very legible on a black background
+highlight comment ctermfg=cyan
+
 " Set up puppet manifest and spec options
 au BufRead,BufNewFile *.pp
   \ set filetype=puppet
