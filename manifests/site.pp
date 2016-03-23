@@ -95,8 +95,9 @@ node default {
       'ack',
       'findutils',
       'gnu-tar',
-      'MacVim',
-      'CMake',
+      'macvim ',
+      'cmake',
+      'vim',
     ]:
   }
 
