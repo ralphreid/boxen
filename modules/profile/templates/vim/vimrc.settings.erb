@@ -20,7 +20,7 @@ try
 catch
 endtry
 
-autocmd FileType ruby setlocal expandtab shiftwidth=2 tabstop=2
+"autocmd FileType ruby setlocal expandtab shiftwidth=2 tabstop=2
 au BufNewFile,BufRead *.md set filetype=markdown
 
 highlight LiteralTabs ctermbg=darkgreen guibg=darkgreen
@@ -46,7 +46,8 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
-" Snippets
+" UltiSnips
+let g:UltiSnipsExpandTrigger="<tab>"
 autocmd FileType pp UltiSnipsAddFiletypes puppet
 autocmd FileType js UltiSnipsAddFiletypes javascript
 autocmd FileType rb UltiSnipsAddFiletypes ruby
