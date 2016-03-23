@@ -12,6 +12,26 @@ class profile::vim {
     content => template('profile/vim/vimrc.settings.erb'),
   }
 
+  file { 'ftdetect_folder':
+    ensure => directory,
+    path => '/Users/${::boxen_user}/.vim/ftdetect',
+  }
+
+  file { 'ftplugin_folder':
+    ensure => directory,
+    path => '/Users/${::boxen_user}/.vim/ftplugin',
+  }
+
+  file { 'index_folder':
+    ensure => directory,
+    path => '/Users/${::boxen_user}/.vim/index',
+  }
+
+  file { 'syntax_folder':
+    ensure => directory,
+    path => '/Users/${::boxen_user}/.vim/syntax',
+  }
+
   file { "ftdetect":
     ensure  => file,
     path    => "/Users/${::boxen_user}/.vim/ftdetect/puppet.vim",
