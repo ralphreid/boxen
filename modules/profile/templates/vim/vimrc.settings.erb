@@ -36,3 +36,12 @@ au BufRead,BufNewFile *.pp
   \ set filetype=puppet
 au BufRead,BufNewFile *_spec.rb
   \ nmap <F8> :!rspec --color %<CR>
+
+" Syntastic settings:
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
