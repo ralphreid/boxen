@@ -98,6 +98,7 @@ node default {
       'macvim',
       'cmake',
       'vim',
+      'battery',
     ]:
   }
 
