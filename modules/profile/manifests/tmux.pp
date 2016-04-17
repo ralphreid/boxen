@@ -6,7 +6,7 @@ class profile::tmux {
   file { "tmux.conf":
     ensure  => file,
     path    => "/Users/${::boxen_user}/.tmux.conf",
-    content => template('profile/tmux.conf.erb'),
+    source => "puppet:///profile/tmux.conf",
   }
 
 }
