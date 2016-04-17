@@ -3,6 +3,12 @@ unbind C-b
 set -g prefix C-s
 
 # Allow repeat sending of prefix
+# By default, in a shell with readline support, C-s is already bound to an action,
+# specifically forward-incremental-history-search (the oposite of C-r).
+# Since we configure tmux to use C-s, we lose the ability to do
+# forward-incremental-history-search. The configuration I demonstrate
+# allows us to get the behavior back by pressing C-s twice.
+
 bind-key -r C-s send-prefix
 
 bind-key r source-file ~/.tmux.conf \; display-message "~/.tmux.conf reloaded"
