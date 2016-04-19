@@ -11,5 +11,5 @@ class profile::tmux {
 
   # Installs battery for right-status
   homebrew::tap { 'goles/battery': }
-  package { 'battery: }
+  package { 'battery': }
 }
