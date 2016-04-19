@@ -79,8 +79,8 @@ node default {
   ruby::version { '2.2.3': }
 
   ruby_gem { 'bropages for all rubies':
-    gem     => 'bropages',
-    version => '0.1.0',
+    gem          => 'bropages',
+    version      => '0.1.0',
     ruby_version => '*',
   }
 
@@ -165,6 +165,7 @@ package {
   ['asciinema', # Enables screencast recording
     'wget',
     'ssh-copy-id',
+    'swarm',
   ]:
 }
 
