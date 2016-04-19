@@ -165,7 +165,7 @@ package {
   ['asciinema', # Enables screencast recording
     'wget',
     'ssh-copy-id',
-    'swarm',
+    'swarm', # Required for tmux battery in status-right
   ]:
 }
 
