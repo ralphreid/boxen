@@ -175,4 +175,5 @@ vagrant::plugin { [
   'r10k',
   'faster',
   'vbox-snapshot',
+  'omnibus', # Required to avoid chef errors
   ]: }
