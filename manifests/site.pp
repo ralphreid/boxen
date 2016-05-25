@@ -86,6 +86,7 @@ node default {
 
   ruby_gem { 'mkpasswd for all rubies':
     gem          => 'mkpasswd',
+    version      => '0.1.0',
     ruby_version => '*',
   }
 
