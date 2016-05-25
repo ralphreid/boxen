@@ -84,6 +84,11 @@ node default {
     ruby_version => '*',
   }
 
+  ruby_gem { 'mkpasswd for all rubies':
+    gem          => 'mkpasswd',
+    ruby_version => '*',
+  }
+
   # Set the global default ruby (auto-installs it if it can)
   class { 'ruby::global':
     version => '2.2.3'
@@ -166,7 +171,6 @@ package {
     'ssh-copy-id',
     'spark', # Required for tmux battery in status-right
     'keychain', # add eval $(keychain --eval ~/.ssh/<your key's name>) to .bash_profile or shell's profile
-    'mkpasswd',
   ]:
 }
 
