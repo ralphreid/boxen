@@ -154,9 +154,9 @@ package {
     'skype',
     'hipchat',
     'slack',
-    'virtualbox',
+    'virtualbox', #may require manual install
     'box-sync',
-    'dockertoolbox',
+    'dockertoolbox', #may require manual install
   ]: provider => 'brewcask'
 }
 
