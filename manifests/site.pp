@@ -101,10 +101,6 @@ node default {
     version => '2.2.2',
   }
 
-  # ensure a certain ruby version is used in a dir
-  ruby::local { '/Users/ralph/Dev':
-    version => '2.2.2'
-  }
 
   # common, useful packages
   package {
