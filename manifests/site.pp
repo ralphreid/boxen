@@ -154,7 +154,6 @@ package {
     'skype',
     'hipchat',
     'slack',
-    'alfred',
     'virtualbox',
     'box-sync',
     'dockertoolbox',
