@@ -76,23 +76,34 @@ node default {
   ruby::version { '1.9.3': }
   ruby::version { '2.0.0': }
   ruby::version { '2.1.8': }
-  ruby::version { '2.2.4': }
+  ruby::version { '2.2.2': }
 
   ruby_gem { 'bropages for all rubies':
     gem          => 'bropages',
-    version      => '0.1.0',
+    version      => '~> 0.1.0',
     ruby_version => '*',
   }
 
   ruby_gem { 'mkpasswd for all rubies':
     gem          => 'mkpasswd',
-    version      => '0.1.0',
+    version      => '~> 0.1.0',
+    ruby_version => '*',
+  }
+
+  ruby_gem { 'bundler for all rubies':
+    gem          => 'bundler',
+    version      => '~> 1.0',
     ruby_version => '*',
   }
 
   # Set the global default ruby (auto-installs it if it can)
   class { 'ruby::global':
-    version => '2.2.4'
+    version => '2.2.2',
+  }
+
+  # ensure a certain ruby version is used in a dir
+  ruby::local { '/Users/ralph/Dev':
+    version => '2.2.2'
   }
 
   # common, useful packages
@@ -163,6 +174,7 @@ package {
     'virtualbox', #may require manual install
     'box-sync',
     'dockertoolbox', #may require manual install
+    'rubymine',
   ]: provider => 'brewcask'
 }
 
