@@ -167,6 +167,7 @@ package {
     'box-sync',
     'dockertoolbox', #may require manual install
     'rubymine',
+    'recordit',
   ]: provider => 'brewcask'
 }
 
