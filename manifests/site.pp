@@ -77,7 +77,7 @@ node default {
   ruby::version { '2.0.0': }
   ruby::version { '2.1.8': }
   ruby::version { '2.2.2': }
-  # ruby::version { '2.3.1': }
+  ruby::version { '2.3.1': }
 
   ruby_gem { 'bropages for all rubies':
     gem          => 'bropages',
