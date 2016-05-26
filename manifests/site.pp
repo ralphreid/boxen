@@ -2,6 +2,7 @@ require boxen::environment
 require homebrew
 require gcc
 
+include profile::bash
 include profile::tmux
 include profile::vundle
 include profile::vim
