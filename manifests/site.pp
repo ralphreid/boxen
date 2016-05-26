@@ -5,6 +5,7 @@ require gcc
 include profile::tmux
 include profile::vundle
 include profile::vim
+include profile::vagrant-instant-rsync-auto
 
 Exec {
   group       => 'staff',
@@ -178,7 +179,6 @@ package {
     'ssh-copy-id',
     'spark', # Required for tmux battery in status-right
     'keychain', # add eval $(keychain --eval ~/.ssh/<your key's name>) to .bash_profile or shell's profile
-    'homebrew/dupes/rsync', # required by vagrant-instant-rsync-auto
   ]:
 }
 
