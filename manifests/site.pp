@@ -168,6 +168,7 @@ package {
     'dockertoolbox', #may require manual install
     'rubymine',
     'recordit',
+    'google-drive',
   ]: provider => 'brewcask'
 }
 
