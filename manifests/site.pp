@@ -97,12 +97,6 @@ node default {
     ruby_version => '*',
   }
 
-  # Set the global default ruby (auto-installs it if it can)
-  class { 'ruby::global':
-    version => '2.2.2',
-  }
-
-
   # common, useful packages
   package {
     [
