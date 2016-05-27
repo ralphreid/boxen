@@ -103,7 +103,7 @@ node default {
   ruby_gem { 'chef for all rubies':
     gem          => 'chef',
     version      => '~> 12.4.3',
-    ruby_version => '*',
+    ruby_version => '2.2.2',
   }
 
   # common, useful packages
