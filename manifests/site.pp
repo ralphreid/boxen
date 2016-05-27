@@ -171,6 +171,7 @@ package {
     'rubymine',
     'recordit',
     'google-drive',
+    'tunnelblick', # open vpn client
   ]: provider => 'brewcask'
 }
 
