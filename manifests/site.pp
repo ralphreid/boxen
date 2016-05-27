@@ -100,6 +100,12 @@ node default {
     ruby_version => '*',
   }
 
+  ruby_gem { 'chef for all rubies':
+    gem          => 'chef',
+    version      => '~> 12.4.3',
+    ruby_version => '*',
+  }
+
   # common, useful packages
   package {
     [
