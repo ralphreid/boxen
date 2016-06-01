@@ -142,6 +142,8 @@ atom::package {
     'markdown-helpers',
     'dash',
     'language-puppet',
+    'language-chef',
+    'linter-foodcritic',
   ]:
 }
 
