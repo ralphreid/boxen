@@ -143,7 +143,6 @@ atom::package {
     'dash',
     'language-puppet',
     'language-chef',
-    'linter-foodcritic',
   ]:
 }
 
