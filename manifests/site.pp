@@ -100,9 +100,15 @@ node default {
     ruby_version => '*',
   }
 
-  ruby_gem { 'chef for all rubies':
+  ruby_gem { 'chef for a ruby':
     gem          => 'chef',
     version      => '~> 12.4.3',
+    ruby_version => '2.2.2',
+  }
+
+  ruby_gem { 'knife-github for a ruby':
+    gem          => 'knife-github-cookbooks',
+    version      => '~> 0.1.8',
     ruby_version => '2.2.2',
   }
 
