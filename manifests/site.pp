@@ -160,6 +160,26 @@ git::config::global { 'push.default':
   value => 'simple'
 }
 
+# git::config::global { 'difftool_kaleidoscope':
+#   key   => 'difftool.cmd',
+#   value => 'ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"',
+# }
+
+
+# [difftool "Kaleidoscope"]
+#     cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
+# [diff]
+#     tool = Kaleidoscope
+# [difftool]
+#     prompt = false
+# [mergetool "Kaleidoscope"]
+#     cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
+#     trustExitCode = true
+# [mergetool]
+#     prompt = false
+# [merge]
+#     tool = Kaleidoscope
+
 package {
   [
     'paw',
