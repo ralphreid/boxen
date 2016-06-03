@@ -179,7 +179,6 @@ package {
     'recordit',
     'google-drive',
     'tunnelblick', # open vpn client
-    'ksdiff', # kaleidoscope command-line tool
   ]: provider => 'brewcask'
 }
 
