@@ -103,13 +103,13 @@ node default {
   ruby_gem { 'chef for a ruby':
     gem          => 'chef',
     version      => '~> 12.4.3',
-    ruby_version => '2.2.2',
+    ruby_version => '2.3.0',
   }
 
   ruby_gem { 'knife-github for a ruby':
     gem          => 'knife-github-cookbooks',
     version      => '~> 0.1.8',
-    ruby_version => '2.2.2',
+    ruby_version => '2.3.0',
   }
 
   # common, useful packages
