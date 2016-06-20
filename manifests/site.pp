@@ -112,6 +112,13 @@ node default {
     ruby_version => '2.3.0',
   }
 
+  ruby_gem { 'knife-github for a ruby':
+    gem          => 'text-table',
+    version      => '~> 1.2.2',
+    ruby_version => '2.3.0',
+  }
+
+
   # common, useful packages
   package {
     [
