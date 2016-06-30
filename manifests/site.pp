@@ -231,5 +231,6 @@ vagrant::plugin { [
   'r10k',
   'faster',
   'vbox-snapshot',
+  'vagrant-hostmanager',
   'omnibus', # Required to avoid chef errors
   ]: }
