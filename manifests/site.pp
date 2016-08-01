@@ -70,8 +70,6 @@ node default {
   }
 
   # node versions
-  nodejs::version { '0.8': }
-  nodejs::version { '0.10': }
   nodejs::version { '0.12': }
 
   # default ruby versions
@@ -201,17 +199,13 @@ package {
     'dropbox',
     'iterm2',
     'evernote',
-    'pycharm',
     'skype',
-    'hipchat',
     'slack',
     'virtualbox', #may require manual install
     'box-sync',
-    'dockertoolbox', #may require manual install
+    'docker-toolbox', #may require manual install
     'rubymine',
     'recordit',
-    'google-drive',
-    'tunnelblick', # open vpn client
   ]: provider => 'brewcask'
 }
 
