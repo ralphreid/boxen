@@ -73,48 +73,46 @@ node default {
   nodejs::version { '0.12': }
 
   # default ruby versions
-  ruby::version { '1.9.3': }
-  ruby::version { '2.0.0': }
   ruby::version { '2.1.8': }
   ruby::version { '2.2.2': }
   ruby::version { '2.3.0': }
   ruby::version { '2.3.1': }
 
-  ruby_gem { 'bropages for all rubies':
-    gem          => 'bropages',
-    version      => '~> 0.1.0',
-    ruby_version => '*',
-  }
+  # ruby_gem { 'bropages for a ruby':
+  #   gem          => 'bropages',
+  #   version      => '~> 0.1.0',
+  #   ruby_version => '2.3.1',
+  # }
 
-  ruby_gem { 'mkpasswd for all rubies':
-    gem          => 'mkpasswd',
-    version      => '~> 0.1.0',
-    ruby_version => '*',
-  }
+  # ruby_gem { 'mkpasswd for all rubies':
+  #   gem          => 'mkpasswd',
+  #   version      => '~> 0.1.0',
+  #   ruby_version => '*',
+  # }
 
-  ruby_gem { 'bundler for all rubies':
+  ruby_gem { 'bundler for a ruby':
     gem          => 'bundler',
     version      => '~> 1.0',
-    ruby_version => '*',
+    ruby_version => '2.1.8',
   }
 
-  ruby_gem { 'chef for a ruby':
-    gem          => 'chef',
-    version      => '~> 12.4.3',
-    ruby_version => '2.3.0',
-  }
+  # ruby_gem { 'chef for a ruby':
+  #   gem          => 'chef',
+  #   version      => '~> 12.4.3',
+  #   ruby_version => '2.3.0',
+  # }
+  #
+  # ruby_gem { 'knife-github for a ruby':
+  #   gem          => 'knife-github-cookbooks',
+  #   version      => '~> 0.1.8',
+  #   ruby_version => '2.3.0',
+  # }
 
-  ruby_gem { 'knife-github for a ruby':
-    gem          => 'knife-github-cookbooks',
-    version      => '~> 0.1.8',
-    ruby_version => '2.3.0',
-  }
-
-  ruby_gem { 'text-table for a ruby':
-    gem          => 'text-table',
-    version      => '~> 1.2.2',
-    ruby_version => '2.3.0',
-  }
+  # ruby_gem { 'text-table for a ruby':
+  #   gem          => 'text-table',
+  #   version      => '~> 1.2.2',
+  #   ruby_version => '2.3.0',
+  # }
 
 
   # common, useful packages
@@ -203,7 +201,6 @@ package {
     'slack',
     'virtualbox', #may require manual install
     'box-sync',
-    'docker-toolbox', #may require manual install
     'rubymine',
     'recordit',
   ]: provider => 'brewcask'
