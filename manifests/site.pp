@@ -73,6 +73,7 @@ node default {
   nodejs::version { '0.12': }
 
   # default ruby versions
+  ruby::version { '2.0.0': }
   ruby::version { '2.1.8': }
   ruby::version { '2.3.0': }
 
