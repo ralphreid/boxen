@@ -84,18 +84,6 @@ node default {
     ruby_version => '2.3.1',
   }
 
-  ruby_gem { 'bundler for a ruby 2.3.1':
-    gem          => 'bundler',
-    version      => '~> 1.0',
-    ruby_version => '2.3.1',
-  }
-
-  ruby_gem { 'bundler for a ruby 2.2.2':
-    gem          => 'bundler',
-    version      => '~> 1.0',
-    ruby_version => '2.2.2',
-  }
-
   ruby_gem { 'chef for a ruby 2.3.1':
     gem          => 'chef',
     version      => '~> 12.4.3',
