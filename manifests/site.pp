@@ -74,27 +74,26 @@ node default {
 
   # default ruby versions
   ruby::version { '2.1.8': }
-  ruby::version { '2.2.2': }
   ruby::version { '2.3.0': }
-  ruby::version { '2.3.1': }
 
-  ruby_gem { 'bropages for a ruby':
-    gem          => 'bropages',
-    version      => '~> 0.1.0',
-    ruby_version => '2.3.1',
-  }
 
-  ruby_gem { 'chef for a ruby 2.3.1':
-    gem          => 'chef',
-    version      => '~> 12.4.3',
-    ruby_version => '2.3.1',
-  }
+  # ruby_gem { 'bropages for a ruby':
+  #   gem          => 'bropages',
+  #   version      => '~> 0.1.0',
+  #   ruby_version => '2.3.1',
+  # }
 
-  ruby_gem { 'knife-github for a ruby 2.3.1':
-    gem          => 'knife-github-cookbooks',
-    version      => '~> 0.1.8',
-    ruby_version => '2.3.1',
-  }
+  # ruby_gem { 'chef for a ruby 2.3.1':
+  #   gem          => 'chef',
+  #   version      => '~> 12.4.3',
+  #   ruby_version => '2.3.1',
+  # }
+
+  # ruby_gem { 'knife-github for a ruby 2.3.1':
+  #   gem          => 'knife-github-cookbooks',
+  #   version      => '~> 0.1.8',
+  #   ruby_version => '2.3.1',
+  # }
 
   # common, useful packages
   package {
