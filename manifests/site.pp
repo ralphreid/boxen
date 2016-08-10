@@ -172,8 +172,6 @@ package {
     'evernote',
     'skype',
     'slack',
-    'box-sync',
-    'rubymine',
     'recordit',
   ]: provider => 'brewcask'
 }
