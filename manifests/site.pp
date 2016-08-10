@@ -6,7 +6,7 @@ include profile::bash
 include profile::tmux
 include profile::vundle
 include profile::vim
-include profile::vagrant-instant-rsync-auto
+# include profile::vagrant-instant-rsync-auto
 
 Exec {
   group       => 'staff',
@@ -78,42 +78,35 @@ node default {
   ruby::version { '2.3.0': }
   ruby::version { '2.3.1': }
 
-  # ruby_gem { 'bropages for a ruby':
-  #   gem          => 'bropages',
-  #   version      => '~> 0.1.0',
-  #   ruby_version => '2.3.1',
-  # }
-
-  # ruby_gem { 'mkpasswd for all rubies':
-  #   gem          => 'mkpasswd',
-  #   version      => '~> 0.1.0',
-  #   ruby_version => '*',
-  # }
-
-  ruby_gem { 'bundler for a ruby':
-    gem          => 'bundler',
-    version      => '~> 1.0',
-    ruby_version => '2.1.8',
+  ruby_gem { 'bropages for a ruby':
+    gem          => 'bropages',
+    version      => '~> 0.1.0',
+    ruby_version => '2.3.1',
   }
 
-  # ruby_gem { 'chef for a ruby':
-  #   gem          => 'chef',
-  #   version      => '~> 12.4.3',
-  #   ruby_version => '2.3.0',
-  # }
-  #
-  # ruby_gem { 'knife-github for a ruby':
-  #   gem          => 'knife-github-cookbooks',
-  #   version      => '~> 0.1.8',
-  #   ruby_version => '2.3.0',
-  # }
+  ruby_gem { 'bundler for a ruby 2.3.1':
+    gem          => 'bundler',
+    version      => '~> 1.0',
+    ruby_version => '2.3.1',
+  }
 
-  # ruby_gem { 'text-table for a ruby':
-  #   gem          => 'text-table',
-  #   version      => '~> 1.2.2',
-  #   ruby_version => '2.3.0',
-  # }
+  ruby_gem { 'bundler for a ruby 2.2.2':
+    gem          => 'bundler',
+    version      => '~> 1.0',
+    ruby_version => '2.2.2',
+  }
 
+  ruby_gem { 'chef for a ruby 2.3.1':
+    gem          => 'chef',
+    version      => '~> 12.4.3',
+    ruby_version => '2.3.1',
+  }
+
+  ruby_gem { 'knife-github for a ruby 2.3.1':
+    gem          => 'knife-github-cookbooks',
+    version      => '~> 0.1.8',
+    ruby_version => '2.3.1',
+  }
 
   # common, useful packages
   package {
@@ -169,26 +162,6 @@ git::config::global { 'push.default':
   value => 'simple'
 }
 
-# git::config::global { 'difftool_kaleidoscope':
-#   key   => 'difftool.cmd',
-#   value => 'ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"',
-# }
-
-
-# [difftool "Kaleidoscope"]
-#     cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
-# [diff]
-#     tool = Kaleidoscope
-# [difftool]
-#     prompt = false
-# [mergetool "Kaleidoscope"]
-#     cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
-#     trustExitCode = true
-# [mergetool]
-#     prompt = false
-# [merge]
-#     tool = Kaleidoscope
-
 package {
   [
     'paw',
@@ -199,7 +172,6 @@ package {
     'evernote',
     'skype',
     'slack',
-    'virtualbox', #may require manual install
     'box-sync',
     'rubymine',
     'recordit',
