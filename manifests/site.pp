@@ -153,7 +153,6 @@ git::config::global { 'push.default':
 
 package {
   [
-    'dash',
     'paw',
     'google-chrome',
     'postbox',
