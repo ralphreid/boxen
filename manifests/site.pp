@@ -3,6 +3,7 @@ require homebrew
 require gcc
 
 include profile::bash
+include profile::osx
 include profile::tmux
 include profile::vundle
 include profile::vim
@@ -152,6 +153,7 @@ git::config::global { 'push.default':
 
 package {
   [
+    'dash',
     'paw',
     'google-chrome',
     'postbox',
