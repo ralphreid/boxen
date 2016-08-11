@@ -1,6 +1,10 @@
 class profile::osx {
 
   include osx::global::tap_to_click
-  include osx::dock::autohide
 
+  # Dock Settings
+  include osx::dock::autohide
+  class { 'osx::dock::position':
+    position => 'left'
+  }
 }
