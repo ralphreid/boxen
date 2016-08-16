@@ -155,6 +155,8 @@ package {
   [
     'paw',
     'google-chrome',
+    'google-drive',
+    'google-hangouts',
     'postbox',
     'dropbox',
     'iterm2',
