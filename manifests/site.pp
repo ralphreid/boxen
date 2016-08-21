@@ -85,7 +85,7 @@ node default {
   }
 
   ruby_gem { 'pry for ruby 2.3.0':
-    gem          => 'bropages',
+    gem          => 'pry',
     version      => '~> 1.0.0',
     ruby_version => '2.3.0',
   }
