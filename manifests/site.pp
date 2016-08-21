@@ -78,12 +78,17 @@ node default {
   ruby::version { '2.1.8': }
   ruby::version { '2.3.0': }
 
+  ruby_gem { 'bropages for ruby 2.3.0':
+    gem          => 'bropages',
+    version      => '~> 0.1.0',
+    ruby_version => '2.3.0',
+  }
 
-  # ruby_gem { 'bropages for a ruby':
-  #   gem          => 'bropages',
-  #   version      => '~> 0.1.0',
-  #   ruby_version => '2.3.1',
-  # }
+  ruby_gem { 'pry for ruby 2.3.0':
+    gem          => 'bropages',
+    version      => '~> 1.0.0',
+    ruby_version => '2.3.0',
+  }
 
   # ruby_gem { 'chef for a ruby 2.3.1':
   #   gem          => 'chef',
