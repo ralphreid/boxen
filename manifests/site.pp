@@ -86,7 +86,7 @@ node default {
 
   ruby_gem { 'pry for ruby 2.3.0':
     gem          => 'pry',
-    version      => '~> 1.0.0',
+    version      => '~> 0.10.4',
     ruby_version => '2.3.0',
   }
 
