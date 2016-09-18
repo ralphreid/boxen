@@ -73,6 +73,16 @@ node default {
   # node versions
   nodejs::version { '0.12': }
 
+  class { 'nodejs::global':
+    version => '0.12',
+  }
+
+  npm_module { 'ttystudio for 0.12':
+    module        => 'ttystudio',
+    version       => '~> 0.0.16',
+    node_version  => '0.0.16',
+  }
+
   # default ruby versions
   ruby::version { '2.0.0': }
   ruby::version { '2.1.8': }
