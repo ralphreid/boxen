@@ -77,10 +77,11 @@ node default {
     version => '0.12',
   }
 
+  # A terminal-to-gif recorder
   npm_module { 'ttystudio for 0.12':
     module        => 'ttystudio',
     version       => '~> 0.0.16',
-    node_version  => '0.0.16',
+    node_version  => '0.12',
   }
 
   # default ruby versions
