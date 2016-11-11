@@ -78,11 +78,11 @@ node default {
   }
 
   # A terminal-to-gif recorder
-  npm_module { 'ttystudio for 0.12':
-    module        => 'ttystudio',
-    version       => '~> 0.0.16',
-    node_version  => '0.12',
-  }
+#  npm_module { 'ttystudio for 0.12':
+#    module        => 'ttystudio',
+#    version       => '~> 0.0.16',
+#    node_version  => '0.12',
+#  }
 
   # default ruby versions
   ruby::version { '2.0.0': }
@@ -169,21 +169,21 @@ git::config::global { 'push.default':
 
 package {
   [
-    'paw',
-    'google-chrome',
-    'google-drive',
-    'postbox',
-    'dropbox',
+    #'paw',
+    #'google-chrome',
+    #'google-drive',
+    #'postbox',
+    #'dropbox',
     'iterm2',
-    'evernote',
-    'skype',
-    'slack',
-    'recordit',
+    #'evernote',
+    #'skype',
+    #'slack',
+    #'recordit',
   ]: provider => 'brewcask'
 }
 
 package {
-  ['asciinema', # Enables screencast recording
+  [#'asciinema', # Enables screencast recording
     'wget',
     'ssh-copy-id',
     'spark', # Required for tmux battery in status-right
