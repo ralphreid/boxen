@@ -184,6 +184,8 @@ package {
 
 package {
   [#'asciinema', # Enables screencast recording
+    'ansible',
+    'boot2docker',
     'wget',
     'ssh-copy-id',
     'spark', # Required for tmux battery in status-right
